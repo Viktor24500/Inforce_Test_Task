@@ -1,0 +1,25 @@
+﻿@using Test_Task_Inforce.Entity
+@model ShortUrlViewModel
+
+<tbody>
+    @for (int i = 0; i < Model.ShortUrls.Count(); i++) 
+    {
+        <tr class="tableTr">
+            <td class="tableTd" hidden>@Model.ShortUrls[i].ShortUrlID</td>
+            <td class="tableTd">@Model.ShortUrls[i].MainUrl</td>
+            <td class="tableTd">@Model.ShortUrls[i].ShortVariant</td>
+            @if(Model.RoleId>-1)
+            {
+                <td class="tableTd">
+                    <button onclick="OpenForm">Create</button>
+                </td>
+                <td class="tableTd">
+                    <a href="/ShortUrl/shortUrl//@Model.ShortUrls[i].ShortUrlID">Details</a>
+                </td>
+                <td class="tableTd">
+                    <a href="">Delete</a>
+                </td>
+            }
+        </tr>
+    }
+</tbody>
