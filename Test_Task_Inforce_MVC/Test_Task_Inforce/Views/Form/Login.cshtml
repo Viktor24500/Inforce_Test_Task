@@ -1,0 +1,22 @@
+﻿﻿@{
+	Layout = null;
+}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="stylesheet" href="~/css/Main.css" asp-append-version="true" />
+</head>
+<body>
+	<form action="/login" method="post" class="login-form">
+		<div>
+			<div class="form-group">
+				<input type="text" class="input-field loginInput" name="userName" id="login" value="" placeholder="Login" required>
+				<input type="password" class="input-field passwordInput" name="userPassword" id="password" value="" placeholder="Password" required>
+				<button type="submit" class="btn btn-login" value="">Login</button>
+			</div>
+		</div>
+	</form>
+
+</body>

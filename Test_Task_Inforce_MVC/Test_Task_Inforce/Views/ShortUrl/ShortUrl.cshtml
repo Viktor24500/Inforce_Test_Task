@@ -1,0 +1,20 @@
+﻿@using Test_Task_Inforce.Entity
+@model ShortUrlViewModel
+<table>
+    <thead>
+        <tr class="tableTr">
+            <th class="tableTh" hidden>ShortUrlID</th>
+            <th class="tableTh">MainUrl</th>
+            <th class="tableTh">ShortVariant</th>
+            if(@Model.RoleId>-1)
+            {
+                <th class="tableTh">Create</th>
+                <th class="tableTh">Delete</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @Html.Partial("/Views/ShortUrl/ShortUrlTable.cshtml", Model)
+    </tbody>
+</table>
+@Html.Partial("/Views/Form/AddShortUrlForm.cshtml")
